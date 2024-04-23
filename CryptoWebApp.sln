@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoWebApp", "src\CryptoWebApp\CryptoWebApp.csproj", "{455FA363-A863-4E7A-96A2-4922A13BD174}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoWebApp.Data", "src\CryptoWebApp.Data\CryptoWebApp.Data.csproj", "{5E7B4930-D24A-47B8-9276-D4924C6237C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoWebApp.Messages", "src\CryptoWebApp.Messages\CryptoWebApp.Messages.csproj", "{22D2C088-B90C-4F85-96D0-C2422156418D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{455FA363-A863-4E7A-96A2-4922A13BD174}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{455FA363-A863-4E7A-96A2-4922A13BD174}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{455FA363-A863-4E7A-96A2-4922A13BD174}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{455FA363-A863-4E7A-96A2-4922A13BD174}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E7B4930-D24A-47B8-9276-D4924C6237C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E7B4930-D24A-47B8-9276-D4924C6237C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E7B4930-D24A-47B8-9276-D4924C6237C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E7B4930-D24A-47B8-9276-D4924C6237C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22D2C088-B90C-4F85-96D0-C2422156418D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22D2C088-B90C-4F85-96D0-C2422156418D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22D2C088-B90C-4F85-96D0-C2422156418D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22D2C088-B90C-4F85-96D0-C2422156418D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
