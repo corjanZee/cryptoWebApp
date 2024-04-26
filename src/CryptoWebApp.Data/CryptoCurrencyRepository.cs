@@ -29,7 +29,8 @@ public class CryptoCurrencyRepository(CryptoDbContext cryptoDbContext) : ICrypto
             new CryptoCurrency(
                 cryptoModel.Code,
                 cryptoModel.Name,
-                cryptoModel.Description), cancellationToken);
+                cryptoModel.Description), 
+            cancellationToken);
         await cryptoDbContext.SaveChangesAsync(cancellationToken);
         return result.Entity.ToModel();
     }
