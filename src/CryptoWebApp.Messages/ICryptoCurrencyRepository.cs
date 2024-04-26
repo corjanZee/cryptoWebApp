@@ -6,4 +6,5 @@ public interface ICryptoCurrencyRepository
     Task<IEnumerable<CryptoModel>> GetAsync(CryptoModel cryptoModel, CancellationToken cancellationToken);
     Task<CryptoModel> CreateAsync(CryptoModel cryptoModel, CancellationToken cancellationToken);
     Task<CryptoModel> Update(CryptoModel cryptoModel, CancellationToken cancellationToken);
+    Task<CryptoModel?> Delete(string id, CancellationToken cancellationToken);
 }

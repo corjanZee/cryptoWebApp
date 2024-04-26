@@ -12,11 +12,10 @@ public class CryptoCurrency
         Code = !string.IsNullOrWhiteSpace(code) ? code : throw new ArgumentNullException(nameof(code));
         Name = !string.IsNullOrWhiteSpace(name) ? name : throw new ArgumentNullException(nameof(name));
     }
-
-    [BsonId]
-    public ObjectId Id { get; }
-    public string Code { get; }
-    public string Name { get; }
-    public string Description { get; }
+    
+    public ObjectId Id { get; private set; }
+    public string Code { get; private set; }
+    public string Name { get; private set; }
+    public string Description { get; private set; }
     
 }

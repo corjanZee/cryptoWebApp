@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using MongoDB.Driver;
 
 var builder = WebApplication.CreateBuilder(args);
-var connectionString = builder.Configuration.GetSection("DbConnection").Value;
+var connectionString = builder.Configuration.GetSection("DatabaseConnection:DbConString").Value;
 
 if (connectionString == null)
 {
@@ -13,7 +13,8 @@ if (connectionString == null)
 }
 
 var client = new MongoClient(connectionString);
-builder.Services.AddDbContext<CryptoDbContext>(options => options.UseMongoDB(connectionString, "CryptoDb"));
+var db = client.GetDatabase("crypto_db");
+builder.Services.AddDbContext<CryptoDbContext>(options => options.UseMongoDB(db.Client, db.DatabaseNamespace.DatabaseName));
 builder.Services.AddControllers();
 builder.Services.AddScoped<ICryptoCurrencyRepository, CryptoCurrencyRepository>();
 builder.Services.AddEndpointsApiExplorer();

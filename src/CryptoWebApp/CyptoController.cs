@@ -24,4 +24,14 @@ public class CyptoController(ICryptoCurrencyRepository cryptoCurrencyRepository)
             return BadRequest($"Crypto with {e.CyCryptoModel.Code} and {e.CyCryptoModel.Name} already exist");
         }
     }
+
+    [HttpDelete("{id}")]
+    public async Task<ActionResult> DeleteItem(string id, CancellationToken cancellationToken)
+    {
+        var deletedItem = await cryptoCurrencyRepository.Delete(id, cancellationToken);
+        if (deletedItem == null)
+            return BadRequest($"There is no Crypto currency found with  id {id}");
+        
+        return Ok();
+    }
 }
