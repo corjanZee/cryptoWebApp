@@ -14,12 +14,11 @@ if (connectionString == null)
 
 var client = new MongoClient(connectionString);
 var db = client.GetDatabase("crypto_db");
+
 builder.Services.AddDbContext<CryptoDbContext>(options => options.UseMongoDB(db.Client, db.DatabaseNamespace.DatabaseName));
 builder.Services.AddControllers();
 builder.Services.AddScoped<ICryptoCurrencyRepository, CryptoCurrencyRepository>();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
 
 var app = builder.Build();
 
