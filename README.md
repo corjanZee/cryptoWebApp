@@ -1,5 +1,12 @@
 # Crypto web app
-The following are list of operations which can be done to crypto application
+The following application is used to create, update, search and delete cypto currencies. The technology stacks used are as follows
+
+- Mongo Db to store the data
+- Entity framework as the ORM 
+- asp.net core 8
+
+
+The operations which can be conducted are listed below 
 
 | Operation | HttpType   | Endpoint                                                  |
 |-----------|------------|-----------------------------------------------------------|
@@ -46,6 +53,8 @@ To add the database connection string this can be done using the appsettings.jso
 ````
 "DbConnection":"mongodb://root:test@localhost:27017/"
 ````
+
+### Tip
 
 If you have docker and wish to quickly get a mogoDb quickly up and running. You can use docker compose in the root of this project
 
